@@ -1,7 +1,7 @@
 
 # aria-accordian
 
-  A simple ARIA-friendly accordian (WIP), based on [iCITA's tabpanel](href="http://test.cita.illinois.edu/aria/tabpanel/tabpanel2.php")
+  A simple ARIA-friendly accordian (WIP), based on [iCITA's tabpanel](http://test.cita.illinois.edu/aria/tabpanel/tabpanel2.php)
 
 ## Installation
 
