@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ARIA Accordian</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/test/mocha/mocha.css" />
+    <script src="/test/mocha/mocha.js"></script>
+    <script>mocha.setup('bdd')</script>
+    <script src="/build/build.js"></script>
+    <style type="text/css">
+      #fixture {
+        padding: 40px;
+      }
+        #fixture .panel {
+          background-color: red
+        }
+          #fixture .panel.selected {
+            background-color: green
+          }
+        #fixture .tab {
+          background-color: blue
+        }
+    </style>
+  </head>
+  <body>
+    <div id="mocha"></div>
+
+    <div id="fixture">
+      <div class="tab">tab1</div>
+      <div class="panel">panel1</div>
+      <div class="tab">tab2</div>
+      <div class="panel">panel2</div>
+      <div class="tab">tab3</div>
+      <div class="panel">panel3</div>
+      <div class="tab">tab4</div>
+      <div class="panel">panel4</div>
+      <div class="tab">tab5</div>
+      <div class="panel">panel5</div>
+      <div class="tab">tab6</div>
+      <div class="panel">panel6</div>
+    </div>
+
+    <script src="/test/aria-accordian.js"></script>
+    <script>(this.mochaPhantomJS || this.mocha).run()</script>
+  </body>
+</html>
