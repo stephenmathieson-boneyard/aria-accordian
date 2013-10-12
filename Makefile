@@ -1,5 +1,5 @@
 
-build: components index.js a11y-accordian.css
+build: components index.js aria-accordian.css
 	@component build --dev
 
 components: component.json

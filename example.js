@@ -1,4 +1,4 @@
-var Accordian = require('a11y-accordian');
+var Accordian = require('aria-accordian');
 
 var accordian = new Accordian('.accordian', {
   tab: '.tab',
