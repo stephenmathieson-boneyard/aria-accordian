@@ -8,6 +8,7 @@ var ev = require('event');
 var normalize = require('normalize');
 var classes = require('classes');
 var keyname = require('keyname');
+var isFocusable = require('is-focusable');
 
 module.exports = Accordian;
 
@@ -119,9 +120,11 @@ Accordian.prototype.destroy = function () {
 function Tab(accordian, element, index) {
   element.id = element.id || rndid();
   element.setAttribute('role', 'tab');
-  // TODO
-  //   don't add tabindex if the element is already focusable
-  element.tabIndex = 0;
+
+  if (!isFocusable(element)) {
+    element.tabIndex = 0;
+  }
+
   this.accordian = accordian;
   this.element = element;
   this.index = index;
@@ -137,10 +140,8 @@ function Tab(accordian, element, index) {
  */
 
 Tab.prototype.setPanel = function (panel) {
-  var el = this.element;
   this.panel = panel;
-  el.tabIndex = 0;
-  aria.controls(el, panel.element.id);
+  aria.controls(this.element, panel.element.id);
   return this.unbind().bind();
 };
 
@@ -168,20 +169,20 @@ Tab.prototype.bind = function () {
     }
 
     switch (key) {
-    case 'down':
-    case 'right':
-      self.next().element.focus();
-      event.preventDefault();
-      break;
-    case 'up':
-    case 'left':
-      self.previous().element.focus();
-      event.preventDefault();
-      break;
-    case 'enter':
-    case 'space':
-      self.onclick(event);
-      break;
+      case 'down':
+      case 'right':
+        self.next().element.focus();
+        event.preventDefault();
+        break;
+      case 'up':
+      case 'left':
+        self.previous().element.focus();
+        event.preventDefault();
+        break;
+      case 'enter':
+      case 'space':
+        self.onclick(event);
+        break;
     }
   }));
 

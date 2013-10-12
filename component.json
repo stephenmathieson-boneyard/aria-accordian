@@ -16,7 +16,8 @@
     "component/map": "*",
     "component/event": "*",
     "stephenmathieson/normalize": "*",
-    "component/keyname": "*"
+    "component/keyname": "*",
+    "stephenmathieson/is-focusable": "*"
   },
   "development": {},
   "license": "MIT",

@@ -5,6 +5,8 @@ describe('aria-accordian', function () {
 
   var accordian;
 
+  var isFocusable = require('is-focusable');
+
   function assert(expr, msg) {
     if (!expr) throw new Error(msg || 'shit broke');
   }
@@ -75,9 +77,9 @@ describe('aria-accordian', function () {
     }
   });
 
-  it('should give tabindex to every tab', function () {
+  it('should make every tab focusable', function () {
     for (var i = accordian.tabs.length - 1; i >= 0; i--) {
-      assert(accordian.tabs[i].element.tabIndex > -1, 'expecting tab # ' + i + ' to have tabindex > -1');
+      assert(isFocusable(accordian.tabs[i].element), 'expecting tab # ' + i + ' to be focusable');
     }
   });
 

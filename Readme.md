@@ -19,9 +19,8 @@
 
 ### 0.1.0
 
-    - finish tests (keyboard events, etc.)
-    - finish documentation
-    - only add `tabindex` when necessary
+  - finish tests (keyboard events, etc.)
+  - finish documentation
 
 ## License
 
