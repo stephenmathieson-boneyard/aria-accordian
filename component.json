@@ -1,0 +1,31 @@
+{
+  "name": "aria-accordian",
+  "repo": "stephenmathieson/aria-accordian",
+  "description": "A simple ARIA-friendly accordian",
+  "version": "0.0.1",
+  "keywords": [
+    "ARIA",
+    "accordian"
+  ],
+  "dependencies": {
+    "yields/merge": "*",
+    "component/emitter": "*",
+    "component/classes": "*",
+    "stephenmathieson/rndid": "*",
+    "stephenmathieson/aria-attributes": "*",
+    "component/map": "*",
+    "component/event": "*",
+    "stephenmathieson/normalize": "*",
+    "component/keyname": "*",
+    "stephenmathieson/is-focusable": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ],
+  "styles": [
+    "aria-accordian.css"
+  ]
+}

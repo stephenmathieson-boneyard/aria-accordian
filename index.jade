@@ -1,0 +1,124 @@
+!!!5
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    title ARIA Accordian Example
+    link(rel="stylesheet", type="text/css", href="/build/build.css")
+    style(type="text/css").
+      body > div {
+        border: 2px dotted black;
+        padding: 20px;
+      }
+
+  body
+    h1 ARIA Accordian Example
+    p Based on &nbsp;
+      a(href="http://test.cita.illinois.edu/aria/tabpanel/tabpanel2.php")
+        | iCITA's tabpanel
+
+    div
+      h2 Happy Time Pizza On-Line Ordering System
+
+      div.accordian
+        h3(class="tab")
+          | Crust
+
+        div(class="panel")
+          h4 Select Crust
+          ul
+            li
+              label
+                input(type="radio", name="crust")
+                | Deep dish
+            li
+              label
+                input(type="radio", name="crust")
+                | Thick and cheesy
+            li
+              label
+                input(type="radio", name="crust")
+                | Thick and spicy
+            li
+              label
+                input(type="radio", name="crust")
+                | Thin
+
+        h3(class="tab")
+          | Veggies
+
+        div(class="panel")
+          h4 Select Veggies
+          ul
+            li
+              label
+                input(type="checkbox", name="veggies")
+                | Black Olives
+            li
+              label
+                input(type="checkbox", name="veggies")
+                | Green Olives
+            li
+              label
+                input(type="checkbox", name="veggies")
+                | Green Peppers
+            li
+              label
+                input(type="checkbox", name="veggies")
+                | Mushrooms
+            li
+              label
+                input(type="checkbox", name="veggies")
+                | Onions
+            li
+              label
+                input(type="checkbox", name="veggies")
+                | Pineapple
+
+        h3(class="tab")
+          | Carnivore
+
+        div(class="panel")
+          h4 Select Carnivore Options
+          ul
+            li
+              label
+                input(type="checkbox", name="meat")
+                | Pepperoni
+            li
+              label
+                input(type="checkbox", name="meat")
+                | Italian Sausage
+            li
+              label
+                input(type="checkbox", name="meat")
+                | Ham
+            li
+              label
+                input(type="checkbox", name="meat")
+                | Hamburger
+
+        h3(class="tab")
+          | Delivery
+
+        div(class="panel")
+          h4 Select Delivery Method
+          ul
+            li
+              label
+                input(type="radio", name="delivery")
+                | Delivery
+            li
+              label
+                input(type="radio", name="delivery")
+                | Eat In
+            li
+              label
+                input(type="radio", name="delivery")
+                | Carry Out
+            li
+              label
+                input(type="radio", name="delivery")
+                | Overnight Mail
+
+    script(src="/build/build.js")
+    script(src="/example.js")

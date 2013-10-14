@@ -1,0 +1,13 @@
+
+.accordian .tab {
+  display: block;
+  cursor: pointer;
+}
+
+.accordian .panel {
+  display: none;
+}
+
+.accordian .panel.selected {
+  display: block;
+}
