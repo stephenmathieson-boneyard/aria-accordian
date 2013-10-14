@@ -44,9 +44,9 @@ describe('aria-accordian', function () {
     assert(accordian.element === fixture, 'should query for the selector');
   });
 
-  it('should set `role=application` on the given element', function () {
+  it('should set `role=tablist` on the given element', function () {
     var fixture = document.getElementById('fixture');
-    assert(fixture.getAttribute('role') === 'application');
+    assert(fixture.getAttribute('role') === 'tablist');
   });
 
 

@@ -58,7 +58,7 @@ Accordian.prototype.setup = function () {
 
   var self = this;
 
-  this.element.setAttribute('role', 'application');
+  this.element.setAttribute('role', 'tablist');
 
   this.tabs = map(query('tab'), function (tab, index) {
     return new Tab(self, tab, index);
